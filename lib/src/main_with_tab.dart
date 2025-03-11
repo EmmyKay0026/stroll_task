@@ -9,20 +9,26 @@ class MainHomeTab extends StatefulWidget {
 }
 
 class _MainHomeTabState extends State<MainHomeTab> {
-  int _currentIndex = 0;
+  int _currentIndex = 1;
 
   final List<Widget> _pages = [
-    StrollBonfirePage(),
     Center(
       child: Text(
         "Home",
-        style: TextStyle(fontSize: 24),
+        style: TextStyle(fontSize: 24, color: Colors.white),
+      ),
+    ),
+    StrollBonfirePage(),
+    Center(
+      child: Text(
+        "Chat",
+        style: TextStyle(fontSize: 24, color: Colors.white),
       ),
     ),
     Center(
       child: Text(
-        "Chat",
-        style: TextStyle(fontSize: 24),
+        "User",
+        style: TextStyle(fontSize: 24, color: Colors.white),
       ),
     )
   ];
