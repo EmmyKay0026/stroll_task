@@ -11,6 +11,6 @@ final List<QuestionModel> currentQuestion = [
       OptionModel(id: 'c', label: 'C', text: 'Wind-down time after dinners'),
       OptionModel(id: 'd', label: 'D', text: 'The serenity past midnight'),
     ],
-    selectedOptionId: 'd',
+    selectedOptionId: 'b',
   )
 ];
