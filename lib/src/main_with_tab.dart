@@ -40,7 +40,7 @@ class _MainHomeTabState extends State<MainHomeTab> {
   }
 
   BottomNavigationBarItem _buildBottomNavigationBarItem(
-      String iconImg, String label, int index) {
+      String iconImg, int index) {
     // final isSelected = _currentIndex == index;
     return BottomNavigationBarItem(
         backgroundColor: Colors.black,
@@ -60,15 +60,15 @@ class _MainHomeTabState extends State<MainHomeTab> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.black,
+        // backgroundColor: Colors.black,
         body: _pages[_currentIndex],
         bottomNavigationBar: BottomNavigationBar(
           backgroundColor: Color(0xff0F1115),
           items: [
-            _buildBottomNavigationBarItem("assets/icons/Card.png", 'Assets', 0),
-            _buildBottomNavigationBarItem("assets/icons/bonfire.png", 's', 1),
-            _buildBottomNavigationBarItem("assets/icons/chat.png", 's', 1),
-            _buildBottomNavigationBarItem("assets/icons/user.png", 's', 1),
+            _buildBottomNavigationBarItem("assets/icons/Card.png", 0),
+            _buildBottomNavigationBarItem("assets/icons/bonfire.png", 1),
+            _buildBottomNavigationBarItem("assets/icons/chat.png", 1),
+            _buildBottomNavigationBarItem("assets/icons/user.png", 1),
           ],
           currentIndex: _currentIndex,
           onTap: _onItemTapped,

@@ -21,7 +21,7 @@ class _StrollBonfirePageState extends State<StrollBonfirePage> {
       OptionModel(id: 'c', label: 'C', text: 'Wind-down time after dinners'),
       OptionModel(id: 'd', label: 'D', text: 'The serenity past midnight'),
     ],
-    selectedOptionId: 'd', // Default selected option
+    selectedOptionId: 'c',
   );
 
   @override
@@ -133,18 +133,20 @@ class _StrollBonfirePageState extends State<StrollBonfirePage> {
                                 size: 26,
                               ),
                             ),
-                            Container(
-                              padding: EdgeInsets.symmetric(
-                                  vertical: 4, horizontal: 13),
-                              decoration: BoxDecoration(
-                                color: AppColors.primaryPurple,
-                                // border: Border.all(color: AppColors.primaryPurple),
-                                shape: BoxShape.circle,
-                              ),
-                              child: Icon(
-                                Icons.arrow_forward,
-                                color: Color(0xff020202),
-                                size: 26,
+                            GestureDetector(
+                              child: Container(
+                                padding: EdgeInsets.symmetric(
+                                    vertical: 4, horizontal: 13),
+                                decoration: BoxDecoration(
+                                  color: AppColors.primaryPurple,
+                                  // border: Border.all(color: AppColors.primaryPurple),
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Icon(
+                                  Icons.arrow_forward,
+                                  color: Color(0xff020202),
+                                  size: 26,
+                                ),
                               ),
                             )
                           ],

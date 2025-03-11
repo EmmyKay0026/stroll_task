@@ -55,19 +55,42 @@ class _QuestionWidgetState extends State<QuestionWidget> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         // Question text
-        Row(
-          // mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
+        Stack(
           children: [
-            Container(
-              width: 65,
-              height: 65,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border: Border.all(color: Color(0xff121517), width: 4),
-                image: const DecorationImage(
-                  image: AssetImage('assets/images/user.png'),
-                  fit: BoxFit.cover,
+            Transform.translate(
+              offset: Offset(40, -20),
+              child: Container(
+                padding:
+                    EdgeInsets.only(top: 4, bottom: 4, right: 30, left: 30),
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Color(0xE5121518),
+                  ),
+                  borderRadius: BorderRadius.all(Radius.circular(100)),
+                  color: Color(0xE5121518),
+                ),
+                child: Text(
+                  'Angelina, 28',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xffF5F5F5),
+                    fontSize: 11,
+                  ),
+                ),
+              ),
+            ),
+            Transform.translate(
+              offset: Offset(0, -20),
+              child: Container(
+                width: 70,
+                height: 70,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(color: Color(0xff121517), width: 6),
+                  image: const DecorationImage(
+                    image: AssetImage('assets/images/user.png'),
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
             ),
@@ -77,36 +100,18 @@ class _QuestionWidgetState extends State<QuestionWidget> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  // margin: EdgeInsets.only(left: 5, top: 6),
-
-                  padding:
-                      EdgeInsets.only(top: 4, bottom: 4, right: 30, left: 10),
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      color: Color(0xE5121518),
-                    ),
-                    borderRadius: BorderRadius.all(Radius.circular(100)),
-                    color: Color(0xE5121518),
-                  ),
-                  child: Text(
-                    'Angelina, 28',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xffF5F5F5),
-                      fontSize: 11,
-                    ),
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(top: 10),
-                  width: 250,
-                  child: Text(
-                    _question.question,
-                    style: const TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Color(0XFFF5F5F5),
-                      fontSize: 20,
+                Transform.translate(
+                  offset: Offset(70, -0),
+                  child: Container(
+                    margin: EdgeInsets.only(top: 10, left: 10),
+                    width: 250,
+                    child: Text(
+                      _question.question,
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Color(0XFFF5F5F5),
+                        fontSize: 20,
+                      ),
                     ),
                   ),
                 ),
