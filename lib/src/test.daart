@@ -55,33 +55,16 @@ class _QuestionWidgetState extends State<QuestionWidget> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         // Question text
-        Row(
+        Column(
           // mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              width: 65,
-              height: 65,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border: Border.all(color: Color(0xff121517), width: 4),
-                image: const DecorationImage(
-                  image: AssetImage('assets/images/user.png'),
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
-            SizedBox(
-              width: 8,
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  // margin: EdgeInsets.only(left: 5, top: 6),
-
+            Stack(children: [
+              Positioned(
+                child: Container(
+                  margin: EdgeInsets.only(left: 5, top: 6),
                   padding:
-                      EdgeInsets.only(top: 4, bottom: 4, right: 30, left: 10),
+                      EdgeInsets.only(top: 4, bottom: 4, right: 3, left: 70),
                   decoration: BoxDecoration(
                     border: Border.all(
                       color: Color(0xE5121518),
@@ -89,18 +72,61 @@ class _QuestionWidgetState extends State<QuestionWidget> {
                     borderRadius: BorderRadius.all(Radius.circular(100)),
                     color: Color(0xE5121518),
                   ),
-                  child: Text(
-                    'Angelina, 28',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xffF5F5F5),
-                      fontSize: 11,
+                  child: Positioned(
+                    bottom: -20,
+                    left: 10,
+                    child: Text(
+                      'Angelina, 28',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xffF5F5F5),
+                        fontSize: 11,
+                      ),
                     ),
                   ),
                 ),
+              ),
+              Container(
+                width: 65,
+                height: 65,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(color: Color(0xff121517), width: 4),
+                  image: const DecorationImage(
+                    image: AssetImage('assets/images/user.png'),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+            ]),
+            SizedBox(
+              width: 8,
+            ),
+            // Column(
+            //   crossAxisAlignment: CrossAxisAlignment.start,
+            //   children: [
+            //     Container(
+            //       width: 200,
+            //       margin: EdgeInsets.only(left: 64, top: 8),
+            //       // padding: EdgeInsets.only(right: 30),
+            //       child: Text(
+            //         _question.question,
+            //         style: const TextStyle(
+            //           fontWeight: FontWeight.bold,
+            //           color: Color(0XFFF5F5F5),
+            //           fontSize: 20,
+            //         ),
+            //       ),
+            //     ),
+            //   ],
+            // ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
                 Container(
-                  margin: EdgeInsets.only(top: 10),
-                  width: 250,
+                  width: 200,
+                  margin: EdgeInsets.only(left: 64, top: 0),
+                  // padding: EdgeInsets.only(right: 30),
                   child: Text(
                     _question.question,
                     style: const TextStyle(
